@@ -1,0 +1,8 @@
+name: second-workFlow
+on: issues
+jobs:
+    infoJob:
+        runs-on: ubuntu-latest
+        steps:
+            - name: get logs
+              run: echo "${{ toJson(github.event)}}"
